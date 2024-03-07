@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: Ats.web
+metadata:
+    template: azd-init@1.6.1
+services:
+    Ats.web:
+        project: .
+        host: containerapp
+        language: js
+        dist: dist/.
+        docker:
+            path: Dockerfile

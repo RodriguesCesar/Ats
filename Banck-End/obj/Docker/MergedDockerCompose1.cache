@@ -1,0 +1,36 @@
+name: dockercompose7530557622786307903
+services:
+  api:
+    build:
+      context: C:\dev\ATS
+      dockerfile: src/Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    image: your-clean-api
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\César\AppData\Roaming/Microsoft/UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\César\AppData\Roaming/ASP.NET/Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose7530557622786307903_default

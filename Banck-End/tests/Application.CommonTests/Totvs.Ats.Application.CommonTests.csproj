@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <AssemblyName>Totvs.Ats.Application.CommonTests</AssemblyName>
+      <RootNamespace>Totvs.Ats.Application.CommonTests</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Application\Totvs.Ats.Application.csproj" />
+    </ItemGroup>
+
+</Project>

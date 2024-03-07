@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.1.0</PackageVersion>
+    <PackageId>Totvs.Ats</PackageId>
+    <Title>Clean microservice DDD API</Title>
+    <Authors>CesarRodrigues</Authors>
+    <Description>creating a new API using clean architecture, DDD, and CQRS among other cool stuff.</Description>
+    <PackageTags>dotnet-new;templates;api;microservices;ddd;clean-architecture;cqrs</PackageTags>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+
+</Project>

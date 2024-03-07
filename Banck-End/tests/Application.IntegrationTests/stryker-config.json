@@ -1,0 +1,15 @@
+{
+  "stryker-config": {
+    "mutate": [
+      "!**/DependencyInjection.cs"
+    ],
+    "TotvsAtsDatabase": {
+      "ConnectionString": "mongodb://localhost:27017",
+      "DatabaseName": "TotvsAts",
+      "ApplicantCollectionName": "Applicants"
+    },
+    "ignore-mutations": [
+      "string"
+    ]
+  }
+}

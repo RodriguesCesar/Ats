@@ -1,0 +1,13 @@
+C:\dev\TesteCesar\src\Application\bin\Debug\net6.0\YourCompany.YourProductName.Application.deps.json
+C:\dev\TesteCesar\src\Application\bin\Debug\net6.0\YourCompany.YourProductName.Application.dll
+C:\dev\TesteCesar\src\Application\bin\Debug\net6.0\YourCompany.YourProductName.Application.pdb
+C:\dev\TesteCesar\src\Application\bin\Debug\net6.0\YourCompany.YourProductName.Domain.dll
+C:\dev\TesteCesar\src\Application\bin\Debug\net6.0\YourCompany.YourProductName.Domain.pdb
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\YourCompany.YourProductName.Application.dll
+C:\dev\TesteCesar\src\Application\obj\Debug\net6.0\YourCompany.YourProductName.Application.pdb

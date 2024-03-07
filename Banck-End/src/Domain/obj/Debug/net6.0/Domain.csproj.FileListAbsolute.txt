@@ -1,0 +1,10 @@
+C:\dev\TesteCesar\src\Domain\bin\Debug\net6.0\YourCompany.YourProductName.Domain.deps.json
+C:\dev\TesteCesar\src\Domain\bin\Debug\net6.0\YourCompany.YourProductName.Domain.dll
+C:\dev\TesteCesar\src\Domain\bin\Debug\net6.0\YourCompany.YourProductName.Domain.pdb
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\YourCompany.YourProductName.Domain.dll
+C:\dev\TesteCesar\src\Domain\obj\Debug\net6.0\YourCompany.YourProductName.Domain.pdb

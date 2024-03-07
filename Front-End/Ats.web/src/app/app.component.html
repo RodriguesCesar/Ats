@@ -1,0 +1,324 @@
+<div class="m-5">
+  <h3>Vacancy Consultation</h3>
+  <p>List of registered vacancies</p>
+  <div class="mb-3">
+     <button class="btn btn-outline-success btn-sm" 
+        data-bs-toggle="modal" data-bs-target="#modalCadastro">
+     Register for vacancies
+     </button>
+  </div>
+  <table class="table table-bordered table-striped table-hover">
+     <thead>
+        <tr>
+           <th>Title</th>
+           <th>Description</th>
+           <th>Country</th>
+           <th>Phone</th>
+           <th>Operations</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr *ngFor="let c of jobs">
+           <td>{{c.title | uppercase}}</td>
+           <td>{{c.description | lowercase}}</td>
+           <td>{{c.country}}</td>
+           <td>{{c.contactPhone}}</td>
+           <td>
+              <button class="btn btn-outline-primary btn-sm me-2"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalEdicao"
+                 (click)="onEdit(c.id)">
+              Edit
+              </button>
+              <button class="btn btn-outline-primary btn-sm me-2"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalCandidates"
+                 (click)="onViewApplicants(c.id)">
+              View Candidates
+              </button>
+              <button class="btn btn-outline-danger btn-sm"
+                 (click)="onDelete(c.id)">
+              Delete
+              </button>
+           </td>
+        </tr>
+     </tbody>
+     <tfoot>
+        <tr>
+           <td>Quantity of vacancies: {{jobs.length}}</td>
+        </tr>
+     </tfoot>
+  </table>
+</div>
+<!-- Model de canditatos -->
+<div class="modal fade" id="modalCandidates" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h1 class="modal-title fs-5" id="exampleModalLabel">List candidates</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <div class="m-5">
+              <table class="table table-bordered table-striped table-hover">
+                 <thead>
+                    <tr>
+                       <th>Name</th>
+                       <th>Email</th>
+                       <th>Phone</th>
+                       <th>Skills</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr *ngFor="let c of applicants">
+                       <td>{{c.firstName + ' ' + c.lastName| uppercase}}</td>
+                       <td>{{c.email | lowercase}}</td>
+                       <td>{{c.phone}}</td>
+                       <td>{{c.skills}}</td>
+                    </tr>
+                 </tbody>
+                 <tfoot>
+                    <tr>
+                       <td>Quantity of applicants: {{applicants.length}}</td>
+                    </tr>
+                 </tfoot>
+              </table>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<!-- Modal de cadastro -->
+<div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h1 class="modal-title fs-5" id="exampleModalLabel">Vacancy registration</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form [formGroup]="form" (ngSubmit)="onSubmit()">
+           <div class="mb-2">
+              <label>Title:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="title"/>
+              <div class="text-danger" *ngIf="f['title'].touched && f['title'].invalid">
+                 Filling in the name is mandatory and must be 8 to 100 characters long.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Description:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="description"/>
+              <div class="text-danger" *ngIf="f['description'].touched && f['description'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Country:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="country"/>
+              <div class="text-danger" *ngIf="f['country'].touched && f['country'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>City:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="city"/>
+              <div class="text-danger" *ngIf="f['city'].touched && f['city'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Manager:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="manager"/>
+              <div class="text-danger" *ngIf="f['manager'].touched && f['manager'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Job Experience:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="jobExperience"/>
+              <div class="text-danger" *ngIf="f['jobExperience'].touched && f['jobExperience'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Type Job:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="jobType"/>
+              <div class="text-danger" *ngIf="f['jobType'].touched && f['jobType'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Required Skills:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="requiredSkills"/>
+              <div class="text-danger" *ngIf="f['requiredSkills'].touched && f['requiredSkills'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Email:</label>
+              <input type="text" placeholder="input here" class="form-control" formControlName="contactEmail"/>
+              <div class="text-danger" *ngIf="f['contactEmail'].touched && f['contactEmail'].invalid">
+                 Filling in the email is mandatory and must contain a valid email address.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Telephone:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="contactPhone"/>
+              <div class="text-danger" *ngIf="f['contactPhone'].touched && f['contactPhone'].invalid">
+                 Filling in the telephone number is mandatory and must be in the correct format.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Initial salary:</label>
+              <input type="number" placeholder="input here" class="form-control"
+                 formControlName="salaryFrom"/>
+              <div class="text-danger" *ngIf="f['salaryFrom'].touched && f['salaryFrom'].invalid">
+                 Filling in the starting salary is mandatory and must be in the format.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Final salary:</label>
+              <input type="number" placeholder="input here" class="form-control"
+                 formControlName="salaryTo"/>
+              <div class="text-danger" *ngIf="f['salaryTo'].touched && f['salaryTo'].invalid">
+                 Filling in the final salary is mandatory and must be in the format.
+              </div>
+           </div>
+           <div class="mb-2">
+              <button type="submit" class="btn btn-success" 
+                 [disabled]="form.invalid"
+                 data-bs-dismiss="modal">
+              Register
+              </button>
+           </div>
+           </form>
+        </div>
+     </div>
+  </div>
+</div>
+<!-- Modal de edição -->
+<div class="modal fade" id="modalEdicao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h1 class="modal-title fs-5" id="exampleModalLabel">Edit jobs</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form [formGroup]="formEdicao" (ngSubmit)="onEditSubmit()">
+           <input type="hidden" formControlName="id"/>
+           <div class="mb-2">
+              <label>Title:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="title"/>
+              <div class="text-danger" *ngIf="f['title'].touched && f['title'].invalid">
+                 Filling in the name is mandatory and must be 8 to 100 characters long.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Description:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="description"/>
+              <div class="text-danger" *ngIf="f['description'].touched && f['description'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Country:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="country"/>
+              <div class="text-danger" *ngIf="f['country'].touched && f['country'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>City:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="city"/>
+              <div class="text-danger" *ngIf="f['city'].touched && f['city'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Manager:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="manager"/>
+              <div class="text-danger" *ngIf="f['manager'].touched && f['manager'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Job Experience:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="jobExperience"/>
+              <div class="text-danger" *ngIf="f['jobExperience'].touched && f['jobExperience'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Type Job:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="jobType"/>
+              <div class="text-danger" *ngIf="f['jobType'].touched && f['jobType'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Required Skills:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="requiredSkills"/>
+              <div class="text-danger" *ngIf="f['requiredSkills'].touched && f['requiredSkills'].invalid">
+                 Filling in the name is mandatory and must be between 8 and 255 characters.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Email:</label>
+              <input type="text" placeholder="input here" class="form-control" formControlName="contactEmail"/>
+              <div class="text-danger" *ngIf="f['contactEmail'].touched && f['contactEmail'].invalid">
+                 Filling in the email is mandatory and must contain a valid email address.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Telephone:</label>
+              <input type="text" placeholder="input here" class="form-control"
+                 formControlName="contactPhone"/>
+              <div class="text-danger" *ngIf="f['contactPhone'].touched && f['contactPhone'].invalid">
+                 Filling in the telephone number is mandatory and must be in the correct format.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Salario Inicial:</label>
+              <input type="number" placeholder="input here" class="form-control"
+                 formControlName="salaryFrom"/>
+              <div class="text-danger" *ngIf="f['salaryFrom'].touched && f['salaryFrom'].invalid">
+                 Filling in the starting salary is mandatory and must be in the format.
+              </div>
+           </div>
+           <div class="mb-2">
+              <label>Final salary:</label>
+              <input type="number" placeholder="input here" class="form-control"
+                 formControlName="salaryTo"/>
+              <div class="text-danger" *ngIf="f['salaryTo'].touched && f['salaryTo'].invalid">
+                 Filling in the final salary is mandatory and must be in the format.
+              </div>
+           </div>
+           <div class="mb-3">
+              <input type="submit" class="btn btn-primary"
+                 [disabled]="formEdicao.invalid"
+                 data-bs-dismiss="modal"
+                 value="Save editions"/>
+           </div>
+           </form>
+        </div>
+     </div>
+  </div>
+</div>

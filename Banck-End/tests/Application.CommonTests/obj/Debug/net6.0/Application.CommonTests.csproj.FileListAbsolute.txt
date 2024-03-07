@@ -1,0 +1,15 @@
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Application.CommonTests.deps.json
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Application.CommonTests.dll
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Application.CommonTests.pdb
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Application.dll
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Domain.dll
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Application.pdb
+C:\dev\TesteCesar\tests\Application.CommonTests\bin\Debug\net6.0\YourCompany.YourProductName.Domain.pdb
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.csproj.AssemblyReference.cache
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.AssemblyInfoInputs.cache
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.AssemblyInfo.cs
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.csproj.CoreCompileInputs.cache
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\Application.CommonTests.csproj.CopyComplete
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\YourCompany.YourProductName.Application.CommonTests.dll
+C:\dev\TesteCesar\tests\Application.CommonTests\obj\Debug\net6.0\YourCompany.YourProductName.Application.CommonTests.pdb

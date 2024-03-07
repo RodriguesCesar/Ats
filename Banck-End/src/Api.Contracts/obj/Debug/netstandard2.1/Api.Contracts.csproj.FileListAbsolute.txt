@@ -1,0 +1,10 @@
+C:\dev\TesteCesar\src\Api.Contracts\bin\Debug\netstandard2.1\YourCompany.YourProductName.Api.Contracts.deps.json
+C:\dev\TesteCesar\src\Api.Contracts\bin\Debug\netstandard2.1\YourCompany.YourProductName.Api.Contracts.dll
+C:\dev\TesteCesar\src\Api.Contracts\bin\Debug\netstandard2.1\YourCompany.YourProductName.Api.Contracts.pdb
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\Api.Contracts.csproj.AssemblyReference.cache
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\Api.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\Api.Contracts.AssemblyInfoInputs.cache
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\Api.Contracts.AssemblyInfo.cs
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\Api.Contracts.csproj.CoreCompileInputs.cache
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\YourCompany.YourProductName.Api.Contracts.dll
+C:\dev\TesteCesar\src\Api.Contracts\obj\Debug\netstandard2.1\YourCompany.YourProductName.Api.Contracts.pdb

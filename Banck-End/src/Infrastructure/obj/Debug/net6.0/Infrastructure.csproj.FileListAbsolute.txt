@@ -1,0 +1,15 @@
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Infrastructure.deps.json
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Infrastructure.dll
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Infrastructure.pdb
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Application.dll
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Domain.dll
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Application.pdb
+C:\dev\TesteCesar\src\Infrastructure\bin\Debug\net6.0\YourCompany.YourProductName.Domain.pdb
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\YourCompany.YourProductName.Infrastructure.dll
+C:\dev\TesteCesar\src\Infrastructure\obj\Debug\net6.0\YourCompany.YourProductName.Infrastructure.pdb
