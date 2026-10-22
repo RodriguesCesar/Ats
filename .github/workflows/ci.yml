@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  backend:
+    name: Backend build and test
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Banck-End
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore
+        run: dotnet restore Totvs.Ats.sln
+
+      - name: Build
+        run: dotnet build Totvs.Ats.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test Totvs.Ats.sln --configuration Release --no-build --verbosity minimal
+
+  frontend:
+    name: Frontend build and test
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Front-End/Ats.web
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: Front-End/Ats.web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test -- --watch=false --browsers=ChromeHeadless
