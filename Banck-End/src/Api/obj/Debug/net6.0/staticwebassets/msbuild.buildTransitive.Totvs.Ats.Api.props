@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Totvs.Ats.Api.props" />
-</Project>

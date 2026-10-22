@@ -32,44 +32,61 @@ To run the project locally, follow these steps:
     
 
 2. *Backend Setup*:
-    - Navigate to the backend directory:
-    
+    - From the repository root, navigate to the backend directory:
+
+    ```bash
     cd backend
-    
+    ```
+
     - Install dependencies:
-    
+
+    ```bash
     dotnet restore
-    
+    ```
+
     - Build the solution:
-    
+
+    ```bash
     dotnet build
-    
+    ```
+
     - Run unit tests:
-    
+
+    ```bash
     dotnet test
-    
+    ```
+
     - Start the microservices using Docker:
-    
-    docker-compose up
-    
+
+    ```bash
+    docker compose up --build
+    ```
+
 
 3. *Frontend Setup*:
-    - Navigate to the frontend directory:
-    
-    cd frontend
-    
+    - From the repository root, navigate to the Angular application:
+
+    ```bash
+    cd frontend/Ats.web
+    ```
+
     - Install dependencies:
-    
-    npm install
-    
+
+    ```bash
+    npm ci
+    ```
+
     - Build the project:
-    
-    ng build
-    
+
+    ```bash
+    npm run build
+    ```
+
     - Run the frontend application:
-    
-    ng serve
-    
+
+    ```bash
+    npm start
+    ```
 
 4. *Access the Application*:
     - Once both backend and frontend are running, access the application at http://localhost:4200.
