@@ -9,6 +9,8 @@ jobs:
   backend:
     name: Backend build and test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     services:
       mongodb:
@@ -46,6 +48,8 @@ jobs:
   frontend:
     name: Frontend build and test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     defaults:
       run:
