@@ -25,4 +25,4 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h3')?.textContent).toContain('Vacancy Consultation');
   });
-});
+ main
