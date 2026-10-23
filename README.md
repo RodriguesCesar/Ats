@@ -1,100 +1,88 @@
-# TOTVS Career Role Opportunity Project
+# ATS (Applicant Tracking System)
 
-This project aims to demonstrate proficiency in building microservices architecture using best practices with .NET Core 6, Domain-Driven Design (DDD), unit and integration tests, Docker, and Angular v17 for frontend development. The project serves as an examination for potential career opportunities at TOTVS, showcasing the ability to implement a scalable and maintainable solution following industry standards.
+[![CI](https://github.com/RodriguesCesar/Ats/actions/workflows/ci.yml/badge.svg)](https://github.com/RodriguesCesar/Ats/actions/workflows/ci.yml)
 
-## Project Overview
+Projeto de estudo para demonstrar arquitetura moderna com **.NET + Angular**, aplicando práticas de **Clean Architecture, DDD e CQRS**.
 
-The project consists of two main components:
+> Este repositório está em evolução para padrão profissional de mercado (ver [Issue #1](https://github.com/RodriguesCesar/Ats/issues/1)).
 
-1. *Microservices Backend with .NET Core 6 and DDD*:
-    - Implements microservices architecture using .NET Core 6, adhering to the principles of Domain-Driven Design (DDD).
-    - Each microservice represents a distinct domain or business function, facilitating modularity and scalability.
-    - Utilizes best practices for building APIs, including RESTful design principles and proper validation.
-    - Implements unit tests for each domain logic to ensure reliability and maintainability.
-    - Integrates Docker for containerization, enabling easy deployment and scalability.
-    - Provides comprehensive documentation for developers to understand the domain models, API endpoints, and integration procedures.
+---
 
-2. *Frontend Application with Angular v17*:
-    - Develops the frontend using Angular v17, a robust framework for building dynamic web applications.
-    - Implements responsive and user-friendly interfaces following modern design principles.
-    - Integrates with the backend microservices via RESTful APIs to fetch and manipulate data.
-    - Utilizes Angular services and components to encapsulate functionality and enhance code maintainability.
-    - Implements unit and integration tests for frontend components to ensure quality and reliability.
-    - Offers seamless navigation and interactive user experiences to enhance usability.
+## Visão geral da arquitetura
 
-## Getting Started
+- **Backend**: .NET 6, API minimal, separação por camadas (Domain/Application/Infrastructure/Api).
+- **Frontend**: Angular 17.
+- **Testes**: unitários e integração no backend, testes no frontend.
+- **Containerização**: Dockerfiles e compose para execução local.
 
-To run the project locally, follow these steps:
+Estrutura atual do repositório:
 
-1. *Clone the Repository*:
-    
-    git clone https://github.com/RodriguesCesar/Ats.git
-    
+- `backend/` (backend)
+- `frontend/Ats.web/` (frontend)
 
-2. *Backend Setup*:
-    - From the repository root, navigate to the backend directory:
+---
 
-    ```bash
-    cd backend
-    ```
+## Pré-requisitos
 
-    - Install dependencies:
+- .NET SDK 6.x
+- Node.js 20+
+- npm 10+
+- Docker (opcional para execução containerizada)
 
-    ```bash
-    dotnet restore
-    ```
+---
 
-    - Build the solution:
+## Como rodar localmente
 
-    ```bash
-    dotnet build
-    ```
+### 1) Backend
 
-    - Run unit tests:
+```bash
+cd backend
+dotnet restore
+dotnet build
+dotnet test
+```
 
-    ```bash
-    dotnet test
-    ```
+Para executar API:
 
-    - Start the microservices using Docker:
+```bash
+cd backend/src/Api
+dotnet run
+```
 
-    ```bash
-    docker compose up --build
-    ```
+### 2) Frontend
 
+```bash
+cd frontend/Ats.web
+npm ci
+npm run build
+npm test -- --watch=false --browsers=ChromeHeadless
+npm start
+```
 
-3. *Frontend Setup*:
-    - From the repository root, navigate to the Angular application:
+Aplicação frontend padrão: `http://localhost:4200`
 
-    ```bash
-    cd frontend/Ats.web
-    ```
+---
 
-    - Install dependencies:
+## Qualidade e CI
 
-    ```bash
-    npm ci
-    ```
+Este projeto possui pipeline no GitHub Actions com:
 
-    - Build the project:
+- Build e testes do backend
+- Build e testes do frontend
 
-    ```bash
-    npm run build
-    ```
+Workflow: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 
-    - Run the frontend application:
+---
 
-    ```bash
-    npm start
-    ```
+## Roadmap curto
 
-4. *Access the Application*:
-    - Once both backend and frontend are running, access the application at http://localhost:4200.
+- [ ] Fortalecer documentação técnica e diagramas
+- [ ] Aumentar cobertura de testes e quality gates
+- [ ] Evoluir observabilidade e segurança de borda
 
-## Contributing
+---
 
-Contributions to improve the project are welcome. Feel free to submit pull requests with enhancements, bug fixes, or new features.
+## Contato
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- GitHub: [@RodriguesCesar](https://github.com/RodriguesCesar)
+- LinkedIn: [Cesar Rodrigues de Sousa](https://www.linkedin.com/in/cesar-rodrigues-de-sousa-b69849162/)
