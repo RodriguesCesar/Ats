@@ -17,10 +17,8 @@ Projeto de estudo para demonstrar arquitetura moderna com **.NET + Angular**, ap
 
 Estrutura atual do repositório:
 
-- `Banck-End/` (backend)
-- `Front-End/Ats.web/` (frontend)
-
-> Observação: o nome das pastas será padronizado em etapas futuras para `backend/` e `frontend/`.
+- `backend/` (backend)
+- `frontend/Ats.web/` (frontend)
 
 ---
 
@@ -38,7 +36,7 @@ Estrutura atual do repositório:
 ### 1) Backend
 
 ```bash
-cd Banck-End
+cd backend
 dotnet restore
 dotnet build
 dotnet test
@@ -47,14 +45,14 @@ dotnet test
 Para executar API:
 
 ```bash
-cd Banck-End/src/Api
+cd backend/src/Api
 dotnet run
 ```
 
 ### 2) Frontend
 
 ```bash
-cd Front-End/Ats.web
+cd frontend/Ats.web
 npm ci
 npm run build
 npm test -- --watch=false --browsers=ChromeHeadless
@@ -78,7 +76,6 @@ Workflow: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 
 ## Roadmap curto
 
-- [ ] Padronizar nomenclatura de pastas (`Banck-End` -> `backend`, `Front-End` -> `frontend`)
 - [ ] Fortalecer documentação técnica e diagramas
 - [ ] Aumentar cobertura de testes e quality gates
 - [ ] Evoluir observabilidade e segurança de borda
