@@ -54,10 +54,13 @@ dotnet run
 ```bash
 cd frontend/Ats.web
 npm ci
+npm run lint
 npm run build
 npm test -- --watch=false --browsers=ChromeHeadless
 npm start
 ```
+
+O comando `npm run lint` é informativo: ainda não há um target `lint` configurado no `angular.json`.
 
 Aplicação frontend padrão: `http://localhost:4200`
 
